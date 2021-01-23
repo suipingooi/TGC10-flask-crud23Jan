@@ -120,5 +120,5 @@ def process_delete_customer(customer_id):
 # "magic code" -- boilerplate
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-            port=8080,
+            port=int(os.environ.get('PORT')),
             debug=True)
