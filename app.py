@@ -29,12 +29,12 @@ def show_customers():
                            customers=database)
 
 
-@app.route('/customer/add')
+@app.route('/customers/add')
 def show_add_customers():
     return render_template('add_customer.template.html')
 
 
-@app.route('/customer/add', methods=['POST'])
+@app.route('/customers/add', methods=['POST'])
 def process_add_customer():
     first_name = request.form.get('first_name')
     last_name = request.form.get('last_name')
@@ -59,7 +59,7 @@ def process_add_customer():
     return redirect(url_for('show_customers'))
 
 
-@app.route('/customer/<customer_id>/edit')
+@app.route('/customers/<customer_id>/edit')
 def show_edit_customer(customer_id):
     # customer_id will refer to the id of customer
     # that we want to edit
@@ -76,7 +76,7 @@ def show_edit_customer(customer_id):
         return "Customer Not Found!"
 
 
-@app.route('/customer/<customer_id>/edit', methods=["POST"])
+@app.route('/customers/<customer_id>/edit', methods=["POST"])
 def process_edit_customer(customer_id):
     print(request.form)
     customer = find_customer_by_id(customer_id)
@@ -96,7 +96,7 @@ def process_edit_customer(customer_id):
         return "Customer Does Not Exist!"
 
 
-@app.route('/customer/<customer_id>/delete')
+@app.route('/customers/<customer_id>/delete')
 def show_delete_customer(customer_id):
     customer = find_customer_by_id(customer_id)
     if customer:
