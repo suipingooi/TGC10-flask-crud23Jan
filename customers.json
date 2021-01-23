@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "first_name":"Cindy",
+        "last_name":"Tan",
+        "email":"cindytan@somewhere.com",
+        "send_marketing_material":true        
+    },
+    {
+        "id": 2,
+        "first_name":"John",
+        "last_name":"Koh",
+        "email":"johnkoh@somewhere.com",
+        "send_marketing_material":false
+    },
+    {
+        "id": 3,
+        "first_name":"Ethan",
+        "last_name":"Wong",
+        "email":"ethanwong@somewhere.com",
+        "send_marketing_material":false
+    },
+    {
+        "id": 4,
+        "first_name":"Jamie",
+        "last_name":"Kam",
+        "email":"jamiekam@gmail.com",
+        "send_marketing_material":true
+    }
+]
