@@ -16,7 +16,9 @@ def home():
 
 @app.route('/customers')
 def show_customers():
-    return render_template('customers.template.html')
+    return render_template('customers.template.html',
+                           customers=database)
+
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
