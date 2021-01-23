@@ -16,6 +16,7 @@
         <td>{{c.first_name}}</td>
         <td>{{c.last_name}}</td>
         <td>{{c.email}}</td>
+        <td><a href="{{ url_for('show_edit_customer', customer_id=c.id) }}">Edit</a></td>
     </tr>
     {% endfor %}
 </table>

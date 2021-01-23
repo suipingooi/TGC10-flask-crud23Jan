@@ -1,0 +1,12 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<form method="POST">
+    <div class="alert alert-danger">
+        Are you sure you want to delete the customer: {{customer.last_name}}, {{customer.first_name}}?
+    </div>
+    <input type="submit" class="btn btn-danger" value="Yes, Delete"/>
+    <a href="{{ url_for('show_customers') }}" class="btn btn-primary">No, Cancel</a>
+</form>
+
+{% endblock %}
